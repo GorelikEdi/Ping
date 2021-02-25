@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/chat_layout"
+    android:layout_height="match_parent"
+    tools:context=".ChatFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:background="@color/colorPrimary"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="20dp"
+                android:id="@+id/photo_header"
+                android:src="@drawable/logo"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center|left"
+                android:fontFamily="@font/bungee"
+                android:textColor="@color/colorAccent"
+                android:textSize="20sp"
+                android:id="@+id/username_header"
+                android:layout_marginEnd="40dp"
+                tools:ignore="RtlHardcoded" />
+
+            <ImageButton
+                android:layout_marginStart="-40dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitCenter"
+                android:id="@+id/chat_menu"
+                android:background="#00000000"
+                android:src="@drawable/chat_menu"/>
+
+        </LinearLayout>
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:id="@+id/progress"/>
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/recycler"
+            android:visibility="invisible"
+            android:layout_marginTop="65dp"
+            android:layout_marginBottom="125dp"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            app:cardUseCompatPadding="true"
+            app:contentPadding="5dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="1dp"
+            android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".1"
+                android:id="@+id/share_btn"
+                android:background="#00000000"
+                android:src="@drawable/icon_share"/>
+
+            <EditText
+                android:inputType="textMultiLine"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/message_edit_text"
+                android:textSize="25sp"
+                android:hint="Message here"/>
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".15"
+                android:id="@+id/send_message_btn"
+                android:background="#00000000"
+                android:src="@drawable/send_icon"/>
+
+        </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+
+
+</FrameLayout>

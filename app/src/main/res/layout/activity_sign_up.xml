@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/scroll_view"
+    tools:context=".SignUp">
+
+    <LinearLayout
+        android:padding="30dp"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="100dp"
+            android:transitionName="logo"
+            android:layout_height="100dp"
+            android:src="@drawable/logo"
+            android:contentDescription="logo"
+            tools:ignore="HardcodedText"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome"
+            android:layout_marginTop="-20dp"
+            android:fontFamily="@font/bungee"
+            android:textSize="30sp"
+            android:id="@+id/welcome"
+            android:transitionName="title"
+            tools:ignore="HardcodedText"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Please sign up"
+            android:layout_marginTop="-20dp"
+            android:fontFamily="@font/actor"
+            android:textSize="20sp"
+            android:id="@+id/signup"
+            android:transitionName="subtitle"
+            tools:ignore="HardcodedText"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/email"
+                app:endIconMode="clear_text"
+                app:errorIconDrawable="@null"
+                android:transitionName="email"
+                app:endIconTint="@color/colorAccent"
+                android:hint="Email"
+                tools:ignore="HardcodedText"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                tools:ignore="HardcodedText"
+                app:passwordToggleTint="@color/colorAccent"
+                android:id="@+id/password"
+                app:errorIconDrawable="@null"
+                android:transitionName="password"
+                app:passwordToggleEnabled="true"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password confirmation"
+                tools:ignore="HardcodedText"
+                app:errorIconDrawable="@null"
+                android:visibility="invisible"
+                android:id="@+id/confirm_password"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/colorAccent"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Username"
+                tools:ignore="HardcodedText"
+                android:visibility="invisible"
+                app:endIconTint="@color/colorAccent"
+                android:id="@+id/username"
+                app:endIconMode="clear_text"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/border"
+                android:padding="16dp"
+                android:visibility="invisible"
+                android:paddingStart="10dp"
+                android:onClick="birthDate"
+                android:id="@+id/birth_date"
+                android:text="Birth date"
+                tools:ignore="HardcodedText,RtlSymmetry"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Sign up"
+                tools:ignore="HardcodedText"
+                android:transitionName="proceed_btn"
+                android:onClick="signUp"
+                android:textColor="@color/colorAccent"
+                android:layout_gravity="center"
+                android:background="@color/colorPrimary"
+                android:elevation="0dp"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:transitionName="account_btn"
+                android:text="Already have an account? Sign in"
+                tools:ignore="HardcodedText"
+                android:onClick="signIn"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="12sp"
+                android:background="#00000000"
+                android:layout_gravity="center"
+                android:elevation="0dp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

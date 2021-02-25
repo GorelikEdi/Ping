@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="snackbar_icon_padding">10dp</dimen>
+    <dimen name="image_view_100">100dp</dimen>
+    <dimen name="image_view_0">0dp</dimen>
+</resources>

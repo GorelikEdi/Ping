@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    android:paddingStart="20dp"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
+    tools:ignore="RtlSymmetry">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logout_icon"
+            android:layout_gravity="end"
+            android:background="#00000000"
+            android:onClick="log_out"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="10dp"/>
+
+        <ImageView
+            android:id="@+id/photo"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="-20dp"
+            android:onClick="add_photo"
+            android:src="@drawable/logo"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_photo_add"
+            android:background="#00000000"
+            android:onClick="add_photo"
+            android:layout_marginTop="-15dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Username"
+            android:id="@+id/username"
+            android:layout_marginTop="-10dp"
+            android:textColor="@color/colorAccent"
+            android:textSize="20sp"
+            android:fontFamily="@font/bungee"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="email"
+            android:id="@+id/email"
+            android:textColor="@color/colorAccent"
+            android:layout_marginTop="-15dp"
+            android:fontFamily="@font/bungee"/>
+
+</LinearLayout>
